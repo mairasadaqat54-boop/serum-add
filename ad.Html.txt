@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 20px;
+      color: #333;
+    }
+    .selector {
+      margin-bottom: 20px;
+    }
+    .ad-container {
+      border: 2px solid #eee;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: #fff;
+    }
+    .ad-image img {
+      width: 100%;
+      display: block;
+    }
+    .ad-content {
+      padding: 15px;
+    }
+    .ad-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .ad-features {
+      list-style: none;
+      padding: 0;
+    }
+    .ad-features li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .ad-features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: purple;
+    }
+    .ad-sale {
+      margin: 15px 0;
+      padding: 10px;
+      background: gold;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .ad-cta {
+      text-align: center;
+    }
+    .ad-cta a {
+      background: #c2185b;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📌 My Ad Portfolio</h2>
+
+<div class="selector">
+  <label for="adSelect">Choose a product: </label>
+  <select id="adSelect">
+    <option value="0">Janssen Serum</option>
+    <option value="1">L’Oreal Hair Oil</option>
+    <option value="2">Nike Running Shoes</option>
+  </select>
+</div>
+
+<div class="ad-container">
+  <div class="ad-image">
+    <img id="product-image" src="" alt="Product Image">
+  </div>
+  <div class="ad-content">
+    <div class="ad-title" id="product-name"></div>
+    <ul class="ad-features" id="product-features"></ul>
+    <div class="ad-sale" id="offer-text"></div>
+    <div class="ad-cta">
+      <a id="cta-link" href="" target="_blank"></a>
+    </div>
+  </div>
+</div>
+
+<!-- JSON Data -->
+<script type="application/json" id="ads-data">
+[
+  {
+    "brand": "MakeupCity",
+    "product": "Janssen Cosmetics – Microsilver Serum",
+    "features": [
+      "Exfoliates, unclogs pores, reduces shine",
+      "Targets blemishes, smooths skin texture",
+      "Absorbs excess oil, mattifies oily skin"
+    ],
+    "offer": "UP TO 50% OFF – Grand Festive Sale",
+    "cta": "Shop Now",
+    "link": "https://makeupcity.com",
+    "image": "https://via.placeholder.com/400x250.png?text=Janssen+Serum"
+  },
+  {
+    "brand": "L’Oreal",
+    "product": "L’Oreal Extraordinary Hair Oil",
+    "features": [
+      "Deeply nourishes dry hair",
+      "Adds shine and smoothness",
+      "Protects against heat damage"
+    ],
+    "offer": "FLAT 30% OFF – Limited Time",
+    "cta": "Buy Now",
+    "link": "https://loreal.com",
+    "image": "https://via.placeholder.com/400x250.png?text=LOreal+Hair+Oil"
+  },
+  {
+    "brand": "Nike",
+    "product": "Nike Air Zoom Pegasus 40",
+    "features": [
+      "Lightweight and breathable",
+      "Responsive cushioning for long runs",
+      "Durable outsole for all terrains"
+    ],
+    "offer": "UP TO 40% OFF – Sports Sale",
+    "cta": "Shop Collection",
+    "link": "https://nike.com",
+    "image": "https://via.placeholder.com/400x250.png?text=Nike+Shoes"
+  }
+]
+</script>
+
+<script>
+  const adsData = JSON.parse(document.getElementById("ads-data").textContent);
+  const select = document.getElementById("adSelect");
+
+  function loadAd(index) {
+    const ad = adsData[index];
+    document.getElementById("product-image").src = ad.image;
+    document.getElementById("product-name").textContent = ad.product;
+    
+    const featuresList = document.getElementById("product-features");
+    featuresList.innerHTML = "";
+    ad.features.forEach(feature => {
+      const li = document.createElement("li");
+      li.textContent = feature;
+      featuresList.appendChild(li);
+    });
+
+    document.getElementById("offer-text").textContent = ad.offer;
+    document.getElementById("cta-link").textContent = ad.cta;
+    document.getElementById("cta-link").href = ad.link;
+  }
+
+  select.addEventListener("change", () => loadAd(select.value));
+  loadAd(0); // load first ad by default
+</script>
+
+</body>
+</html>
