@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calm & Radiant Skin</title>
+  <link rel="stylesheet" href="style.css">
+<style disabled>
+    body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#fff; color:#333; }
+    section { padding: 60px 20px; text-align:center; }
+    h1, h2 { margin-bottom:20px; }
+    p { margin-bottom:15px; line-height:1.6; }
+    .btn { background:#ff6b6b; color:white; padding:15px 30px; border:none; border-radius:30px; font-size:18px; cursor:pointer; transition: all 0.3s ease; text-decoration:none; display:inline-block; }
+    .btn:hover { background:#ff8787; box-shadow:0px 4px 12px rgba(0,0,0,0.2); transform: translateY(-2px); }
+    .card { background:#fafafa; border-radius:20px; padding:20px; margin:15px; box-shadow:0 4px 8px rgba(0,0,0,0.05); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.1); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; max-width:1200px; margin:0 auto; }
+    .hero { background:#ffecec; padding:100px 20px; }
+    .hero img { max-width:250px; margin-top:20px; }
+    .urgency { background:#ffefef; padding:40px; font-size:20px; font-weight:bold; border-top:2px solid #ff6b6b; border-bottom:2px solid #ff6b6b; }
+    footer { background:#f5f5f5; padding:30px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Finally, Calm & Radiant Skin Without Harsh Chemicals</h1>
+    <p>Brighten, hydrate, and smooth your skin with a clean formula powered by Vitamin C + Hyaluronic Acid.</p>
+    <img src="https://images.unsplash.com/photo-1600180758895-09817b4a9c4f" alt="Serum Bottle">
+    <br><a href="#shop" class="btn">Claim Your Glow Back Today</a>
+  </section>
+  <section>
+    <h2>Does this sound familiar?</h2>
+    <p>😩 Harsh chemicals that irritate your skin</p>
+    <p>💸 Expensive creams with no real results</p>
+    <p>🎭 Makeup just to cover dullness & spots</p>
+  </section>
+  <section>
+    <h2>What Makes This Serum Different?</h2>
+    <div class="grid">
+      <div class="card">✨ Dark spots fade naturally</div>
+      <div class="card">💧 Fine lines soften</div>
+      <div class="card">🌿 Lightweight, non-sticky hydration</div>
+      <div class="card">🌟 Confidence that shows</div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1600180758895-09817b4a9c4f" alt="Lifestyle Image" style="margin-top:30px;max-width:500px;width:100%;">
+  </section>
+  <section>
+    <h2>Just 3 Simple Steps</h2>
+    <div class="grid">
+      <div class="card"><h3>Step 1</h3><p>Wash your face</p></div>
+      <div class="card"><h3>Step 2</h3><p>Apply 2–3 drops of serum</p></div>
+      <div class="card"><h3>Step 3</h3><p>Glow all day & night</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Real Women, Real Results</h2>
+    <div class="grid">
+      <div class="card">"I used to hide behind makeup. Now I love my skin."</div>
+      <div class="card">"Worth every drop. My skin feels alive again."</div>
+      <div class="card">"People ask if I’ve been on vacation. It’s just this serum!"</div>
+    </div>
+  </section>
+  <section>
+    <h2>Powered by Clean Ingredients</h2>
+    <div class="grid">
+      <div class="card">🍊 Vitamin C – Brightening</div>
+      <div class="card">💧 Hyaluronic Acid – Hydration</div>
+      <div class="card">❄ Collagen – Firmness</div>
+      <div class="card">✔ Dermatologist-Tested</div>
+    </div>
+  </section>
+  <section class="urgency">
+    🔥 Don’t Miss Out: Stock is Limited! <br>
+    <a href="#shop" class="btn">Order Yours Now</a>
+  </section>
+  <footer>
+    &copy; 2025 Glow Co. All Rights Reserved.
+  </footer>
+</body>
+</html>
